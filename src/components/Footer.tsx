@@ -7,9 +7,12 @@ interface Props extends WithStyles<typeof styles>{
 
 const Footer:React.FC<Props> = ({classes}) =>  {
   const navigateToList = () => {
-    return chrome.tabs.update({url: 'index.html#list'})
+    return chrome.tabs.update({url: 'index.html#list'});
   }
 
+  const navigateToGetDomain = () => {
+    return chrome.tabs.update({url: 'index.html#getdomain'});
+  }
   return (
     <div className={classes.main}>
       <Grid container wrap="nowrap" spacing={1}>
@@ -20,6 +23,13 @@ const Footer:React.FC<Props> = ({classes}) =>  {
           <Link onClick={navigateToList}><Typography variant="subtitle1" className={classes.title}>
             View list of websites
           </Typography>
+          </Link>
+        </Grid>
+        <Grid item xs zeroMinWidth>
+          <Link onClick={navigateToGetDomain}>
+            <Typography variant="subtitle1" className={classes.title}>
+              Get a domain
+            </Typography>
           </Link>
         </Grid>
         <Grid item className={classes.trailing}>

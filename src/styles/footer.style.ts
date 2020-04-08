@@ -14,6 +14,7 @@ const RootStyles = ({spacing, palette} : Theme)  => createStyles({
   title: {
     fontWeight: 'bold',
     fontSize: '14px',
+    cursor: 'pointer'
   }
 });
 

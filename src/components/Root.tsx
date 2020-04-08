@@ -5,6 +5,7 @@ import List from '../internalPages/WebsitesList';
 import Loading from '../internalPages/Loading/Loading';
 import SomethingWentWrong from '../internalPages/Errors/SomethingWentWrong';
 import Install from '../internalPages/InstallPage/Install';
+import GetDomain from '../internalPages/GetDomainPage/GetDomain';
 
 const Root: React.FC = () => (
 	<Router>
@@ -20,6 +21,9 @@ const Root: React.FC = () => (
 			</Route>
 			<Route path="/error">
 				<SomethingWentWrong />
+			</Route>
+			<Route path="/getdomain">
+				<GetDomain />
 			</Route>
 			<Route>
 				<Extension />
