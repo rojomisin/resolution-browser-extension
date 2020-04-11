@@ -25,14 +25,16 @@ const Connect: React.FC<Props> = ({ classes, selectedDomain }) => {
 					Enter an Ethereum address that you control the keys to. If you want to manage your domains later on,
 					you will need to import your keys into a wallet with web3 support.
 				</Typography>
-				<div className={classes.controlBox}> Controll room</div>
 			</>
 		);
 	};
 
 	return (
 		<div className={classes.background}>
-			<Paper className={classes.paper}>{renderDomain()}</Paper>
+			<Paper className={classes.paper}>
+				{renderDomain()}
+				<div className={classes.controlBox}> Controll room</div>	
+			</Paper>
 		</div>
 	);
 };

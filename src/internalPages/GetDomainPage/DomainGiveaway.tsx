@@ -37,12 +37,11 @@ const DomainGiveaway: React.FC<Props> = ({ classes, moveTo , setSelectedDomain})
   }, []);
 
   const handleNext = async () => {
+    setCurrent(current + 1);
     if (current === giveawayDomains.length - 1) {
-      setCurrent(current + 1);
       const newDomain = await fetchNewDomain();
       setDomains([...giveawayDomains, newDomain]);
     }
-
   }
 
   const handlePrevious = () => {
