@@ -26,12 +26,19 @@ const ConnectStyles = ({ spacing }: Theme) => createStyles({
     padding: spacing(2),
     margin: spacing(1),
   },
-  controlBox: {
+  addressField: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
     marginTop: spacing(2)
+  },
+  controllBox: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    marginTop: spacing(1)
   },
   image: {
     height: "200px"
